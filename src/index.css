@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+@keyframes twinkle {
+  0%,100%{
+    opacity:.4;
+    transform:scale(1);
+  }
+
+  50%{
+    opacity:1;
+    transform:scale(1.6);
+  }
+}
+
+.star{
+    animation:twinkle ease-in-out infinite;
+    will-change:transform,opacity;
+}

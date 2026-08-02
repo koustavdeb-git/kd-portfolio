@@ -83,7 +83,6 @@ const Hero = () => {
                         <SocialLinks profile={profile.social}/>
                     </div>
 
-                    <TechStack />
                 </motion.div>
 
                 {/* Right Content */}
