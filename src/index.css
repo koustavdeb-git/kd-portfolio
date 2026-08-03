@@ -1,18 +1,79 @@
 @import "tailwindcss";
 
 @keyframes twinkle {
-  0%,100%{
-    opacity:.4;
-    transform:scale(1);
+
+  0%,
+  100% {
+    opacity: .4;
+    transform: scale(1);
   }
 
-  50%{
-    opacity:1;
-    transform:scale(1.6);
+  50% {
+    opacity: 1;
+    transform: scale(1.6);
   }
 }
 
-.star{
-    animation:twinkle ease-in-out infinite;
-    will-change:transform,opacity;
+.star {
+  animation: twinkle ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.animated-gradient {
+  background: linear-gradient(
+    90deg,
+    #3b82f6 0%,
+    #38bdf8 25%,
+    #ffffff 50%,
+    #38bdf8 75%,
+    #3b82f6 100%
+  );
+
+  background-size: 250% auto;
+
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  animation:
+    gradientShift 4s ease-in-out infinite,
+    textGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0%;
+  }
+
+  50% {
+    background-position: 100%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
+
+@keyframes textGlow {
+  0% {
+    filter: brightness(1);
+    text-shadow:
+      0 0 8px rgba(59,130,246,.2),
+      0 0 18px rgba(59,130,246,.15);
+  }
+
+  50% {
+    filter: brightness(1.25);
+    text-shadow:
+      0 0 18px rgba(96,165,250,.5),
+      0 0 35px rgba(96,165,250,.35),
+      0 0 55px rgba(96,165,250,.2);
+  }
+
+  100% {
+    filter: brightness(1);
+    text-shadow:
+      0 0 8px rgba(59,130,246,.2),
+      0 0 18px rgba(59,130,246,.15);
+  }
 }
