@@ -10,7 +10,6 @@ const Hero = () => {
         name: "Koustav Deb",
         role: "Frontend Developer",
         experience: "4+ Years",
-        tagline: "Building fast, responsive & scalable web experiences.",
         description:
             "Frontend Developer specializing in React, JavaScript, Tailwind CSS, REST APIs, and modern web technologies. Passionate about creating clean, accessible, and high-performance user interfaces.",
 
@@ -40,8 +39,18 @@ const Hero = () => {
                         {profile.experience} Experience
                     </span>
 
-                    <h1 className="mt-4 text-5xl font-extrabold leading-tight md:text-7xl">
-                        {profile.tagline}
+                    <h1
+                        className="text-6xl md:text-8xl font-extralight leading-[1.05]"
+                        style={{ fontFamily: "'Outfit', sans-serif" }}
+                    >
+                        Turning{" "}
+                        <span className="font-medium text-400 animated-gradient">
+                            ideas
+                        </span>
+                        <br />
+                        into fast,
+                        <br />
+                        scalable web applications.
                     </h1>
 
 
