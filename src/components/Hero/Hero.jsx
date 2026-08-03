@@ -1,11 +1,8 @@
 import React from 'react'
-import heroImg from "../../assets/my_dp2.jpg";
 import { motion } from "framer-motion";
 import { FaArrowRight, FaDownload } from "react-icons/fa";
-
+import heroImg from "../../assets/bg1.png";
 import Background from "./Background";
-import SocialLinks from "./SocialLinks";
-import TechStack from "./TechStack";
 
 const Hero = () => {
 
@@ -47,41 +44,7 @@ const Hero = () => {
                         {profile.tagline}
                     </h1>
 
-                    <h2 className="mt-6 text-2xl font-semibold text-white md:text-3xl">
-                        Hi, I'm{" "}
-                        <span className="text-blue-400">{profile.name}</span>
-                    </h2>
 
-                    <p className="mt-3 text-lg text-slate-300">
-                        {profile.role}
-                    </p>
-
-                    <p className="mt-8 max-w-xl leading-8 text-slate-400">
-                        {profile.description}
-                    </p>
-
-                    {/* Buttons */}
-                    <div className="mt-10 flex flex-wrap gap-4">
-                        <a
-                            href="#projects"
-                            className="flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-medium transition hover:bg-blue-500"
-                        >
-                            View Projects
-                            <FaArrowRight className="text-sm" />
-                        </a>
-
-                        <a
-                            href="/resume.pdf"
-                            className="flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/60 px-6 py-3 font-medium backdrop-blur transition hover:border-blue-500"
-                        >
-                            <FaDownload className="text-sm" />
-                            Resume
-                        </a>
-                    </div>
-
-                    <div className="mt-10">
-                        <SocialLinks profile={profile.social}/>
-                    </div>
 
                 </motion.div>
 
@@ -96,12 +59,14 @@ const Hero = () => {
                     className="flex flex-1 justify-center"
                 >
                     <div className="relative">
-                        <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-3xl" />
+                        {/* Blue glow */}
+                        <div className="absolute inset-0 bg-blue-500/10 blur-3xl scale-110" />
 
                         <img
                             src={heroImg}
-                            alt={profile.name}
-                            className="relative h-72 w-72 rounded-full border-4 border-slate-800 object-cover shadow-2xl md:h-96 md:w-96"
+                            alt="Tech Illustration"
+                            className="relative w-[620px] md:w-[620px] lg:w-[800px] h-auto object-contain drop-shadow-[0_0_30px_rgba(59,130,246,0.35)] select-none pointer-events-none"
+                            draggable="false"
                         />
                     </div>
                 </motion.div>
