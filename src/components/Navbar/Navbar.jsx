@@ -1,3 +1,5 @@
+
+
 const Navbar = () => {
 
     const navLinks = [
@@ -36,7 +38,10 @@ const Navbar = () => {
 
                 {/* Resume Button */}
                 <a
-                    href="/resume.pdf"
+                    href="/Koustav_cv.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="..."
                     className="hidden rounded-xl bg-blue-600 px-6 py-2.5 font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/30 md:block"
                 >
                     Resume

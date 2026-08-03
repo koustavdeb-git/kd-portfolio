@@ -1,11 +1,29 @@
 import { motion } from "framer-motion";
-import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import { useState } from "react";
+import { FaRegCopy, FaCheck, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
+    const email = "koustavdeb2015@gmail.com";
+
+    const [copied, setCopied] = useState(false);
+
+    const copyEmail = async () => {
+        try {
+            await navigator.clipboard.writeText(email);
+            setCopied(true);
+
+            setTimeout(() => {
+                setCopied(false);
+            }, 2000);
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
     return (
         <section
             id="contact"
-            className="bg-slate-900 py-32"
+            className="bg-slate-900 py-24"
         >
             <div className="mx-auto max-w-4xl px-6 text-center">
 
@@ -29,37 +47,49 @@ const Contact = () => {
                         be a good fit for your team, I'd love to hear from you.
                     </p>
 
-                    {/* Email Button */}
+                    {/* Email */}
 
-                    <a
-                        href="mailto:koustavdeb2015@gmail.com"
-                        className="mt-12 inline-flex items-center gap-3 rounded-xl bg-blue-600 px-8 py-4 text-lg font-semibold transition-all duration-300 hover:-translate-y-1 hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/30"
-                    >
-                        <FaEnvelope />
-                        Email Me
-                    </a>
+                    <div className="mt-12">
+                        <p className="text-sm uppercase tracking-[0.25em] text-slate-500">
+                            Email
+                        </p>
 
+                        <h3 className="mt-4 break-all text-2xl font-semibold text-white md:text-3xl">
+                            {email}
+                        </h3>
+                    </div>
 
-                    <div className="mt-12 flex justify-center gap-10">
+                    {/* Buttons */}
 
-                        <a
-                            href="https://github.com/koustavdeb-git"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-3 text-slate-400 transition hover:text-blue-400"
+                    <div className="mt-10 flex flex-wrap justify-center gap-5">
+
+                        <button
+                            onClick={copyEmail}
+                            className="flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 font-medium transition-all duration-300 hover:-translate-y-1 hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/30"
                         >
-                            <FaGithub className="text-2xl" />
-                            GitHub
-                        </a>
+                            {copied ? <FaCheck /> : <FaRegCopy />}
+
+                            {copied ? "Copied!" : "Copy Email"}
+                        </button>
 
                         <a
                             href="https://linkedin.com/in/yourusername"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-3 text-slate-400 transition hover:text-blue-400"
+                            className="flex items-center gap-2 rounded-xl border border-slate-700 px-6 py-3 text-slate-300 transition hover:border-blue-500 hover:text-white"
                         >
-                            <FaLinkedin className="text-2xl" />
+                            <FaLinkedin />
                             LinkedIn
+                        </a>
+
+                        <a
+                            href="https://github.com/koustavdeb-git"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 rounded-xl border border-slate-700 px-6 py-3 text-slate-300 transition hover:border-blue-500 hover:text-white"
+                        >
+                            <FaGithub />
+                            GitHub
                         </a>
 
                     </div>

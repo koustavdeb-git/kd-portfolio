@@ -11,7 +11,7 @@ const Projects = () => {
     return (
         <section
             id="projects"
-            className="bg-slate-950 py-28"
+            className="bg-slate-950 py-24"
         >
             <div className="mx-auto max-w-7xl px-6">
 

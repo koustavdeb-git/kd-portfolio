@@ -29,7 +29,7 @@ const Experience = () => {
     return (
         <section
             id="experience"
-            className="bg-slate-950 py-28"
+            className="bg-slate-950 pt-24"
         >
             <div className="mx-auto max-w-7xl px-6">
 

@@ -82,12 +82,15 @@ const About = () => {
                     >
 
                         <p className="font-semibold uppercase tracking-widest text-blue-400">
-                            Frontend Developer
+                            Software Engineer
                         </p>
 
-                        <h3 className="mt-4 text-4xl font-bold leading-tight">
-                            Building modern web applications with React.
-                        </h3>
+                        <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+                            Hi, I'm{" "}
+                            <span className="text-blue-400">
+                                Koustav Deb
+                            </span>
+                        </h2>
 
                         <p className="mt-8 leading-8 text-slate-400">
                             I'm a Frontend Developer with 4+ years of professional
@@ -125,7 +128,8 @@ const About = () => {
                         </div>
 
                         <a
-                            href="/resume.pdf"
+                            href="/Koustav_cv.pdf"
+                            download
                             className="mt-10 inline-flex items-center gap-3 rounded-xl bg-blue-600 px-6 py-3 font-medium transition hover:bg-blue-500"
                         >
                             <FaDownload />
