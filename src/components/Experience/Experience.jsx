@@ -19,11 +19,12 @@ const Experience = () => {
     ];
 
     const achievements = [
-        "Developed and maintained enterprise web applications using React and JavaScript",
-        "Built reusable UI components to improve development speed and consistency.",
-        "Integrated REST APIs and CRUD functionality.",
-        "Optimized application performance and improved user experience.",
-        "Worked with Agile teams to deliver production-ready features.",
+        "Developed responsive and reusable React components for enterprise applications.",
+        "Optimized application performance and enhanced user experience.",
+        "Integrated REST APIs and implemented CRUD operations.",
+        "Debugged and resolved production issues to improve application stability.",
+        "Collaborated with designers, backend developers, and QA in an Agile environment.",
+        "Participated in code reviews and maintained clean, scalable code.",
     ];
 
     return (
@@ -73,7 +74,7 @@ const Experience = () => {
                             </p>
 
                             <h3 className="mt-3 text-3xl font-bold">
-                                Frontend Developer
+                                Software Engineer
                             </h3>
 
                             <h4 className="mt-2 text-xl text-slate-300">

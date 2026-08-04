@@ -33,7 +33,7 @@ const About = () => {
         >
             <Background />
 
-            <div className="absolute inset-0 bg-slate-950/70" />
+            <div className="absolute inset-0 bg-slate-950/55" />
 
             <div className="absolute bottom-0 left-0 h-72 w-full bg-gradient-to-b from-transparent via-slate-950/80 to-slate-950" />
 
@@ -128,7 +128,7 @@ const About = () => {
                         </div>
 
                         <a
-                            href="/Koustav_cv.pdf"
+                            href="/Koustav_Deb_Resume.pdf"
                             download
                             className="mt-10 inline-flex items-center gap-3 rounded-xl bg-blue-600 px-6 py-3 font-medium transition hover:bg-blue-500"
                         >
