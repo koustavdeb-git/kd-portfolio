@@ -77,3 +77,7 @@
       0 0 18px rgba(59,130,246,.15);
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
