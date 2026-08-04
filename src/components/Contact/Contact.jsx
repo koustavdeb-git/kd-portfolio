@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { FaRegCopy, FaCheck, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaRegCopy, FaCheck, FaGithub, FaLinkedin, FaExternalLinkAlt } from "react-icons/fa";
 
 const Contact = () => {
     const email = "koustavdeb2015@gmail.com";
@@ -79,7 +79,8 @@ const Contact = () => {
                             className="flex items-center gap-2 rounded-xl border border-slate-700 px-6 py-3 text-slate-300 transition hover:border-blue-500 hover:text-white"
                         >
                             <FaLinkedin />
-                            LinkedIn
+                            <span>LinkedIn</span>
+                            <FaExternalLinkAlt className="text-xs opacity-70" />
                         </a>
 
                         <a
@@ -89,7 +90,8 @@ const Contact = () => {
                             className="flex items-center gap-2 rounded-xl border border-slate-700 px-6 py-3 text-slate-300 transition hover:border-blue-500 hover:text-white"
                         >
                             <FaGithub />
-                            GitHub
+                            <span>GitHub</span>
+                            <FaExternalLinkAlt className="text-xs opacity-70" />
                         </a>
 
                     </div>
