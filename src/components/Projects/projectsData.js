@@ -6,16 +6,17 @@ export const professionalProjects = [
         image: "/images/mortgage.png",
 
         description:
-            "Built responsive React interfaces for a mortgage platform with reusable components, REST API integration, authentication, and enterprise workflows.",
+            "Mortgage Application Platform — A modern web application that streamlines the mortgage application process for brokers and customers. Developed reusable React components, integrated REST APIs, collaborated with cross-functional teams to deliver new features, and improved application reliability through debugging, bug fixes, and unit testing.",
 
         technologies: [
             "React",
+            "Redux",
             "JavaScript",
             "Tailwind",
             "REST API",
         ],
 
-        website: "https://clientwebsite.com",
+        website: "https://8twelve.mortgage/",
     },
 
     {
@@ -25,15 +26,16 @@ export const professionalProjects = [
         image: "/images/permit.png",
 
         description:
-            "Developed permit management interfaces with dynamic forms, reusable UI components, authentication, and API integration.",
+            "A responsive permit application portal for managing residential and commercial construction permits in Washington, DC. Developed reusable frontend components, integrated REST APIs, delivered feature enhancements, and collaborated with cross-functional teams to deliver new features, and maintained application quality through bug fixes and unit testing.",
 
         technologies: [
             "React",
+            "JavaScript",
             "REST API",
-            "Authentication",
+            "Saas",
         ],
 
-        website: "https://clientwebsite.com",
+        website: "https://dob.dc.gov/",
     },
 ];
 
@@ -54,9 +56,9 @@ export const personalProjects = [
             "Tailwind",
         ],
 
-        github: "https://github.com/yourusername",
+        github: "https://github.com/koustavdeb-git/kd-flow-board-app",
 
-        demo: "https://your-demo.com",
+        demo: "https://kd-flow-board-app.vercel.app/",
     },
 
     {
@@ -66,7 +68,7 @@ export const personalProjects = [
         image: "/images/ems.png",
 
         description:
-            "Employee management dashboard with authentication, search, pagination, CRUD operations, charts, and responsive UI.",
+            "Employee management dashboard with dynamic search, pagination, CRUD operations, charts, and responsive UI.",
 
         technologies: [
             "React",
@@ -75,8 +77,8 @@ export const personalProjects = [
             "Tailwind",
         ],
 
-        github: "https://github.com/yourusername",
+        github: "https://github.com/koustavdeb-git/kd-employee-management-system",
 
-        demo: "https://your-demo.com",
+        demo: "https://kd-ems.vercel.app/",
     },
 ];

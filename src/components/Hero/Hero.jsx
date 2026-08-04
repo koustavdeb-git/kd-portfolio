@@ -36,7 +36,7 @@ const Hero = () => {
                     className="flex-1"
                 >
                     <span className="mb-4 inline-block rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm text-blue-400">
-                        {profile.experience} Experience
+                        Clean Code • Scalable UI • Great UX
                     </span>
 
                     <h1

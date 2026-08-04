@@ -1,4 +1,4 @@
-
+import { useState } from "react";
 
 const Navbar = () => {
 
@@ -10,10 +10,11 @@ const Navbar = () => {
         { name: "Contact", href: "#contact" },
     ];
 
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <header className="fixed inset-x-0 top-0 z-50">
-            <nav
-                className="mx-auto mt-4 flex max-w-7xl items-center justify-between rounded-2xl border border-slate-800 bg-slate-950/60 px-8 py-4 backdrop-blur-xl transition-all duration-300">
+        <header className="fixed inset-x-0 top-0 z-50 px-4 sm:px-6 lg:px-8">
+            <nav className="mx-auto mt-4 flex max-w-7xl items-center justify-between rounded-2xl border border-slate-800 bg-slate-950/60 px-6 py-4 backdrop-blur-xl">
                 {/* Logo */}
                 <a
                     href="#home"
@@ -48,10 +49,28 @@ const Navbar = () => {
                 </a>
 
                 {/* Mobile Menu Button */}
-                <button className="md:hidden">
+                <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
                     ☰
                 </button>
             </nav>
+
+            {isOpen && (
+                <div className="mx-4 mt-3 rounded-2xl border border-slate-800 bg-slate-950/95 backdrop-blur-xl md:hidden">
+                    <ul className="flex flex-col p-4">
+                        {navLinks.map((link) => (
+                            <li key={link.name}>
+                                <a
+                                    href={link.href}
+                                    className="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {link.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
         </header>
     );
 };

@@ -73,7 +73,7 @@ const Contact = () => {
                         </button>
 
                         <a
-                            href="https://linkedin.com/in/yourusername"
+                            href="https://www.linkedin.com/in/koustav-deb-0681121b5/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 rounded-xl border border-slate-700 px-6 py-3 text-slate-300 transition hover:border-blue-500 hover:text-white"
