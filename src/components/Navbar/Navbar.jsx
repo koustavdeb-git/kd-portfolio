@@ -39,7 +39,7 @@ const Navbar = () => {
 
                 {/* Resume Button */}
                 <a
-                    href="/Koustav_cv.pdf"
+                    href="/Koustav_Deb_Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="..."
