@@ -1,5 +1,4 @@
 import React from 'react'
-import { motion } from "framer-motion";
 import heroImg from "../../assets/my_dp2.jpg";
 import { FaArrowRight, FaDownload } from "react-icons/fa";
 import SocialLinks from "../Hero/SocialLinks";
@@ -41,25 +40,14 @@ const About = () => {
 
 
 
-                <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="mb-16 text-center text-4xl font-bold md:text-5xl"
-                >
+                <h2 className="mb-16 text-center text-4xl font-bold md:text-5xl">
                     About <span className="text-blue-400">Me</span>
-                </motion.h2>
+                </h2>
 
                 <div className="grid items-center gap-20 lg:grid-cols-2">
 
                     {/* Left */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: .7 }}
-                        className="flex justify-center"
-                    >
+                    <div className="flex justify-center">
                         <div className="relative">
 
                             <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-3xl" />
@@ -71,15 +59,10 @@ const About = () => {
                             />
 
                         </div>
-                    </motion.div>
+                    </div>
 
                     {/* Right */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 40 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: .7 }}
-                    >
+                    <div>
 
                         <p className="font-semibold uppercase tracking-widest text-blue-400">
                             Software Engineer
@@ -136,7 +119,7 @@ const About = () => {
                             Download Resume
                         </a>
 
-                    </motion.div>
+                    </div>
 
                 </div>
 
