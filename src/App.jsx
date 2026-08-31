@@ -12,7 +12,7 @@ import Footer from './components/Footer/Footer'
 function App() {
 
   return (
-    <div className="bg-slate-950 text-white">
+    <div className="min-h-screen bg-[#050816] text-slate-100 antialiased">
 
       <Navbar />
       <Hero />
