@@ -30,7 +30,7 @@ const Experience = () => {
     return (
         <section
             id="experience"
-            className="bg-slate-950 pt-24"
+            className="bg-[var(--bg-primary)] pt-24 transition-colors duration-300"
         >
             <div className="mx-auto max-w-7xl px-6">
 
@@ -41,15 +41,15 @@ const Experience = () => {
                     transition={{ duration: .6 }}
                     className="mb-16 text-center"
                 >
-                    <p className="uppercase tracking-[0.3em] text-blue-400">
+                    <p className="uppercase tracking-[0.3em] text-[var(--accent)]">
                         Experience
                     </p>
 
-                    <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+                    <h2 className="mt-4 text-4xl font-bold text-[var(--text-primary)] md:text-5xl">
                         Professional Experience
                     </h2>
 
-                    <p className="mx-auto mt-6 max-w-2xl text-slate-400">
+                    <p className="mx-auto mt-6 max-w-2xl text-[var(--text-muted)]">
                         Over 4 years of experience building scalable frontend
                         applications, reusable components, and modern user interfaces.
                     </p>
@@ -60,7 +60,7 @@ const Experience = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: .7 }}
-                    className="rounded-3xl border border-slate-800 bg-slate-900/60 p-10 backdrop-blur"
+                    className="rounded-3xl border border-[var(--border-soft)] bg-[var(--bg-panel)] p-10 backdrop-blur transition-colors duration-300"
                 >
 
                     <div className="flex flex-col justify-between gap-8 lg:flex-row">
@@ -69,15 +69,15 @@ const Experience = () => {
 
                         <div className="lg:w-1/3">
 
-                            <p className="text-blue-400 font-medium">
+                            <p className="font-medium text-[var(--accent)]">
                                 Jul 2021 - Present
                             </p>
 
-                            <h3 className="mt-3 text-3xl font-bold">
+                            <h3 className="mt-3 text-3xl font-bold text-[var(--text-primary)]">
                                 Software Engineer
                             </h3>
 
-                            <h4 className="mt-2 text-xl text-slate-300">
+                            <h4 className="mt-2 text-xl text-[var(--text-muted)]">
                                 INADEV India
                             </h4>
 
@@ -93,10 +93,10 @@ const Experience = () => {
 
                                     <li
                                         key={item}
-                                        className="flex gap-4 text-slate-300"
+                                        className="flex gap-4 text-[var(--text-primary)]"
                                     >
 
-                                        <span className="mt-2 h-2 w-2 rounded-full bg-blue-400" />
+                                        <span className="mt-2 h-2 w-2 rounded-full bg-[var(--accent)]" />
 
                                         <span>{item}</span>
 
@@ -108,7 +108,7 @@ const Experience = () => {
 
                             <div className="mt-12">
 
-                                <h5 className="mb-5 text-lg font-semibold">
+                                <h5 className="mb-5 text-lg font-semibold text-[var(--text-primary)]">
                                     Technologies Used
                                 </h5>
 
@@ -118,14 +118,14 @@ const Experience = () => {
 
                                         <div
                                             key={name}
-                                            className="flex items-center gap-3 rounded-xl border border-slate-700 bg-slate-800/60 px-5 py-3 transition hover:border-blue-500"
+                                            className="flex items-center gap-3 rounded-xl border border-[var(--border-soft)] bg-[var(--bg-secondary)] px-5 py-3 transition hover:border-[var(--accent)]"
                                         >
                                             <Icon
                                                 size={22}
-                                                className="text-blue-400"
+                                                className="text-[var(--accent)]"
                                             />
 
-                                            <span>{name}</span>
+                                            <span className="text-[var(--text-primary)]">{name}</span>
 
                                         </div>
 

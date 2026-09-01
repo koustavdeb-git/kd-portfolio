@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { FaSun, FaMoon } from "react-icons/fa";
+import { useTheme } from "../../context/ThemeContext";
 
 const Navbar = () => {
 
+    const { theme, toggleTheme } = useTheme();
     const navLinks = [
         { name: "Home", href: "#home" },
         { name: "About", href: "#about" },
@@ -14,22 +17,22 @@ const Navbar = () => {
 
     return (
         <header className="fixed inset-x-0 top-0 z-50 px-4 sm:px-6 lg:px-8">
-            <nav className="mx-auto mt-4 flex max-w-7xl items-center justify-between rounded-2xl border border-slate-700/80 bg-slate-950/60 px-6 py-4 shadow-[0_10px_35px_rgba(15,23,42,0.45)] backdrop-blur-xl">
+            <nav className="mx-auto mt-4 flex max-w-7xl items-center justify-between rounded-2xl border border-[var(--border-soft)] bg-[var(--bg-panel)] px-4 py-3 shadow-[0_10px_35px_rgba(15,23,42,0.25)] backdrop-blur-xl transition-colors duration-300 sm:px-5 md:px-6">
                 {/* Logo */}
                 <a
                     href="#home"
-                    className="text-2xl font-bold tracking-wide"
+                    className="text-xl font-bold tracking-wide sm:text-2xl"
                 >
-                    <span className="text-white">K</span>
-                    <span className="text-cyan-400">D.</span>
+                    <span className="text-[var(--text-primary)]">K</span>
+                    <span className="text-[var(--accent)]">D.</span>
                 </a>
 
-                <ul className="hidden items-center gap-10 md:flex">
+                <ul className="hidden items-center gap-4 text-sm md:flex lg:gap-8 lg:text-base">
                     {navLinks.map((link) => (
                         <li key={link.name}>
                             <a
                                 href={link.href}
-                                className="relative text-slate-300 transition duration-300 hover:text-white after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-cyan-400 after:transition-all after:duration-300 hover:after:w-full"
+                                className="relative text-[var(--text-muted)] transition duration-300 hover:text-[var(--text-primary)] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-[var(--accent)] after:transition-all after:duration-300 hover:after:w-full"
                             >
                                 {link.name}
                             </a>
@@ -37,20 +40,32 @@ const Navbar = () => {
                     ))}
                 </ul>
 
-                {/* Resume Button */}
-                <a
-                    href="/Koustav_Deb_Resume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hidden rounded-xl bg-cyan-500 px-6 py-2.5 font-medium text-slate-950 transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-400 hover:shadow-lg hover:shadow-cyan-500/30 md:block"
-                >
-                    Resume
-                </a>
+                <div className="hidden items-center gap-2 md:flex lg:gap-3">
+                    {/* Theme Toggle Button */}
+                    <button
+                        onClick={toggleTheme}
+                        className="cursor-pointer rounded-lg bg-[var(--bg-secondary)] p-2.5 text-base text-[var(--accent)] transition-all duration-300 hover:opacity-90 lg:p-3 lg:text-lg"
+                        aria-label="Toggle theme"
+                        title={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+                    >
+                        {theme === 'dark' ? <FaSun /> : <FaMoon />}
+                    </button>
+
+                    {/* Resume Button */}
+                    <a
+                        href="/Koustav_Deb_Resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-xl bg-[var(--accent)] px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:opacity-90 md:block lg:px-6 lg:py-2.5 lg:text-base"
+                    >
+                        Resume
+                    </a>
+                </div>
 
                 {/* Mobile Menu Button */}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="rounded-lg border border-slate-700 bg-slate-900/80 px-3 py-2 text-lg text-slate-200 md:hidden"
+                    className="rounded-lg border border-[var(--border-soft)] bg-[var(--bg-secondary)] px-3 py-2 text-lg text-[var(--text-primary)] md:hidden"
                     aria-label="Toggle menu"
                 >
                     ☰
@@ -58,19 +73,29 @@ const Navbar = () => {
             </nav>
 
             {isOpen && (
-                <div className="mx-4 mt-3 rounded-2xl border border-slate-700 bg-slate-950/95 backdrop-blur-xl md:hidden">
+                <div className="mx-4 mt-3 rounded-2xl border border-[var(--border-soft)] bg-[var(--bg-panel-strong)] backdrop-blur-xl md:hidden">
                     <ul className="flex flex-col p-4">
                         {navLinks.map((link) => (
                             <li key={link.name}>
                                 <a
                                     href={link.href}
-                                    className="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white"
+                                    className="block rounded-lg px-4 py-3 text-[var(--text-muted)] hover:bg-[var(--bg-secondary)] hover:text-[var(--text-primary)]"
                                     onClick={() => setIsOpen(false)}
                                 >
                                     {link.name}
                                 </a>
                             </li>
                         ))}
+                        <li className="border-t border-[var(--border-soft)] pt-3">
+                            <button
+                                onClick={toggleTheme}
+                                className="flex w-full items-center gap-2 rounded-lg px-4 py-3 text-[var(--text-muted)] hover:bg-[var(--bg-secondary)] hover:text-[var(--accent)]"
+                                aria-label="Toggle theme"
+                            >
+                                {theme === 'dark' ? <FaSun /> : <FaMoon />}
+                                <span>{theme === 'dark' ? 'Light Theme' : 'Dark Theme'}</span>
+                            </button>
+                        </li>
                     </ul>
                 </div>
             )}

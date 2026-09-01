@@ -11,7 +11,7 @@ const Projects = () => {
     return (
         <section
             id="projects"
-            className="bg-slate-950 py-24"
+            className="bg-[var(--bg-primary)] py-24 transition-colors duration-300"
         >
             <div className="mx-auto max-w-7xl px-6">
 
@@ -24,15 +24,15 @@ const Projects = () => {
                     transition={{ duration: 0.6 }}
                     className="mb-20 text-center"
                 >
-                    <p className="uppercase tracking-[0.3em] text-blue-400">
+                    <p className="uppercase tracking-[0.3em] text-[var(--accent)]">
                         Portfolio
                     </p>
 
-                    <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+                    <h2 className="mt-4 text-4xl font-bold text-[var(--text-primary)] md:text-5xl">
                         Featured Projects
                     </h2>
 
-                    <p className="mx-auto mt-6 max-w-3xl text-slate-400">
+                    <p className="mx-auto mt-6 max-w-3xl text-[var(--text-muted)]">
                         A collection of enterprise applications and personal
                         projects showcasing my experience in building modern,
                         scalable, and user-focused web applications.
@@ -47,11 +47,11 @@ const Projects = () => {
                     viewport={{ once: true }}
                     className="mb-10"
                 >
-                    <h3 className="text-3xl font-bold">
+                    <h3 className="text-3xl font-bold text-[var(--text-primary)]">
                         Professional Projects
                     </h3>
 
-                    <p className="mt-3 text-slate-400">
+                    <p className="mt-3 text-[var(--text-muted)]">
                         Enterprise applications developed for clients during my
                         professional experience.
                     </p>
@@ -76,11 +76,11 @@ const Projects = () => {
                     viewport={{ once: true }}
                     className="mb-10 mt-24"
                 >
-                    <h3 className="text-3xl font-bold">
+                    <h3 className="text-3xl font-bold text-[var(--text-primary)]">
                         Personal Projects
                     </h3>
 
-                    <p className="mt-3 text-slate-400">
+                    <p className="mt-3 text-[var(--text-muted)]">
                         Independent projects built to learn, experiment, and
                         strengthen my frontend development skills.
                     </p>

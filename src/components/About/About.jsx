@@ -28,20 +28,17 @@ const About = () => {
     return (
         <section
             id="about"
-            className="relative overflow-hidden bg-slate-950 py-28"
+            className="relative overflow-hidden bg-[var(--bg-primary)] pb-20 pt-28 transition-colors duration-300"
         >
             <Background />
-
-            <div className="absolute inset-0 bg-slate-950/55" />
-
-            <div className="absolute bottom-0 left-0 h-72 w-full bg-gradient-to-b from-transparent via-slate-950/80 to-slate-950" />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-28 bg-gradient-to-b from-transparent via-[var(--bg-primary)]/80 to-[var(--bg-primary)]" />
 
             <div className="relative z-10 mx-auto max-w-7xl px-6">
 
 
 
-                <h2 className="mb-16 text-center text-4xl font-bold md:text-5xl">
-                    About <span className="text-blue-400">Me</span>
+                <h2 className="mb-16 text-center text-4xl font-bold text-[var(--text-primary)] md:text-5xl transition-colors duration-300">
+                    About <span className="accent-text">Me</span>
                 </h2>
 
                 <div className="grid items-center gap-20 lg:grid-cols-2">
@@ -50,12 +47,12 @@ const About = () => {
                     <div className="flex justify-center">
                         <div className="relative">
 
-                            <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-3xl" />
+                            <div className="absolute inset-0 rounded-full bg-[var(--accent)]/20 blur-3xl" />
 
                             <img
                                 src={heroImg}
                                 alt="Koustav Deb"
-                                className="relative h-80 w-80 rounded-full border-4 border-slate-800 object-cover shadow-2xl md:h-[420px] md:w-[420px]"
+                                className="relative h-80 w-80 rounded-full border-4 border-[var(--border-soft)] object-cover shadow-2xl md:h-[420px] md:w-[420px]"
                             />
 
                         </div>
@@ -64,18 +61,18 @@ const About = () => {
                     {/* Right */}
                     <div>
 
-                        <p className="font-semibold uppercase tracking-widest text-blue-400">
+                        <p className="font-semibold uppercase tracking-widest accent-text transition-colors duration-300">
                             Software Engineer
                         </p>
 
-                        <h2 className="mt-4 text-4xl font-bold md:text-5xl">
+                        <h2 className="mt-4 text-4xl font-bold text-[var(--text-primary)] transition-colors duration-300 md:text-5xl">
                             Hi, I'm{" "}
-                            <span className="text-blue-400">
+                            <span className="accent-text">
                                 Koustav Deb
                             </span>
                         </h2>
 
-                        <p className="mt-8 leading-8 text-slate-400">
+                        <p className="mt-8 leading-8 text-[var(--text-muted)] transition-colors duration-300">
                             I'm a Frontend Developer with 4+ years of professional
                             experience building responsive, scalable, and
                             user-friendly web applications.
@@ -95,13 +92,13 @@ const About = () => {
 
                                 <div
                                     key={item.title}
-                                    className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 backdrop-blur"
+                                    className="rounded-2xl border transition-colors duration-300 border-[var(--border-soft)] bg-[var(--bg-panel)] p-5 backdrop-blur"
                                 >
-                                    <h4 className="text-3xl font-bold text-blue-400">
+                                    <h4 className="text-3xl font-bold accent-text transition-colors duration-300">
                                         {item.title}
                                     </h4>
 
-                                    <p className="mt-2 text-slate-400">
+                                    <p className="mt-2 text-[var(--text-muted)] transition-colors duration-300">
                                         {item.subtitle}
                                     </p>
                                 </div>
@@ -113,7 +110,7 @@ const About = () => {
                         <a
                             href="/Koustav_Deb_Resume.pdf"
                             download
-                            className="mt-10 inline-flex items-center gap-3 rounded-xl bg-blue-600 px-6 py-3 font-medium transition hover:bg-blue-500"
+                            className="mt-10 inline-flex items-center gap-3 rounded-xl bg-[var(--accent)] px-6 py-3 font-medium text-white transition-all duration-300 hover:opacity-90"
                         >
                             <FaDownload />
                             Download Resume

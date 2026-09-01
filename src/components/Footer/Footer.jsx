@@ -9,22 +9,24 @@ const Footer = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: .8 }} className="border-t border-slate-800 bg-slate-950">
+            transition={{ duration: .8 }}
+            className="border-t border-[var(--border-soft)] bg-[var(--bg-primary)] transition-colors duration-300"
+        >
             <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-8 md:flex-row">
 
                 <div>
-                    <p className="text-slate-400">
+                    <p className="text-[var(--text-muted)]">
                         © {year} Koustav Deb. All rights reserved.
                     </p>
 
-                    <p className="mt-2 text-sm text-slate-500">
+                    <p className="mt-2 text-sm text-[var(--text-muted)]">
                         Built with React, Tailwind CSS & Framer Motion
                     </p>
                 </div>
 
                 <a
                     href="#home"
-                    className="group flex items-center gap-2 text-slate-400 transition hover:text-blue-400"
+                    className="group flex items-center gap-2 text-[var(--text-muted)] transition hover:text-[var(--accent)]"
                 >
                     Back to Top
 

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect } from 'react'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import Experience from './components/Experience/Experience'
@@ -8,11 +8,17 @@ import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
 import Hero from './components/Hero/Hero'
 import Footer from './components/Footer/Footer'
+import { useTheme } from './context/ThemeContext'
 
 function App() {
+  const { theme } = useTheme()
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme
+  }, [theme])
 
   return (
-    <div className="min-h-screen bg-[#050816] text-slate-100 antialiased">
+    <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased">
 
       <Navbar />
       <Hero />

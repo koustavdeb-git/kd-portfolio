@@ -25,7 +25,7 @@ const TechStack = () => {
             scale: 1.05,
           }}
           transition={{ duration: 0.2 }}
-          className="rounded-full border border-slate-700 bg-slate-900/60 px-4 py-2 text-sm font-medium text-slate-300 backdrop-blur-md transition-colors hover:border-blue-500 hover:text-white"
+          className="rounded-full border border-[var(--border-soft)] bg-[var(--bg-panel)] px-4 py-2 text-sm font-medium text-[var(--text-muted)] backdrop-blur-md transition-colors hover:border-[var(--accent)] hover:text-[var(--text-primary)]"
         >
           {tech}
         </motion.span>

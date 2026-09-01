@@ -12,7 +12,7 @@ const ProjectCard = ({ project }) => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
             whileHover={{ y: -8 }}
-            className="group overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 transition-all duration-300 hover:border-blue-500"
+            className="group overflow-hidden rounded-2xl border border-[var(--border-soft)] bg-[var(--bg-panel)] transition-all duration-300 hover:border-[var(--accent)]"
         >
 
             {/* Content */}
@@ -21,20 +21,20 @@ const ProjectCard = ({ project }) => {
                 {/* Badge */}
                 <span
                     className={`inline-block rounded-full px-3 py-1 text-xs font-medium ${project.type === "Professional"
-                            ? "bg-blue-500/10 text-blue-400"
-                            : "bg-emerald-500/10 text-emerald-400"
+                            ? "bg-[var(--accent)]/15 text-[var(--accent)]"
+                            : "bg-emerald-500/10 text-emerald-600"
                         }`}
                 >
                     {project.type}
                 </span>
 
                 {/* Title */}
-                <h3 className="mt-4 text-2xl font-bold">
+                <h3 className="mt-4 text-2xl font-bold text-[var(--text-primary)]">
                     {project.title}
                 </h3>
 
                 {/* Description */}
-                <p className="mt-4 leading-7 text-slate-400">
+                <p className="mt-4 leading-7 text-[var(--text-muted)]">
                     {project.description}
                 </p>
 
@@ -43,7 +43,7 @@ const ProjectCard = ({ project }) => {
                     {project.technologies.map((tech) => (
                         <span
                             key={tech}
-                            className="rounded-lg border border-slate-700 px-3 py-1 text-sm text-slate-300"
+                            className="rounded-lg border border-[var(--border-soft)] px-3 py-1 text-sm text-[var(--text-muted)]"
                         >
                             {tech}
                         </span>
@@ -58,7 +58,7 @@ const ProjectCard = ({ project }) => {
                             href={project.website}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-3 transition hover:bg-blue-500"
+                            className="flex items-center gap-2 rounded-lg bg-[var(--accent)] px-5 py-3 text-white transition hover:opacity-90"
                         >
                             Visit Website
                             <FaExternalLinkAlt size={14} />
@@ -70,7 +70,7 @@ const ProjectCard = ({ project }) => {
                             href={project.github}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-3 transition hover:border-blue-500"
+                            className="flex items-center gap-2 rounded-lg border border-[var(--border-soft)] px-5 py-3 text-[var(--text-primary)] transition hover:border-[var(--accent)]"
                         >
                             <FaGithub />
                             GitHub
@@ -82,7 +82,7 @@ const ProjectCard = ({ project }) => {
                             href={project.demo}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-3 transition hover:border-blue-500"
+                            className="flex items-center gap-2 rounded-lg border border-[var(--border-soft)] px-5 py-3 text-[var(--text-primary)] transition hover:border-[var(--accent)]"
                         >
                             Live Demo
                             <FaExternalLinkAlt size={14} />
