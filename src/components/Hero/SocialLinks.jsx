@@ -39,11 +39,11 @@ const SocialLinks = ({ profile }) => {
                     target={name !== "Email" ? "_blank" : undefined}
                     rel={name !== "Email" ? "noopener noreferrer" : undefined}
                     aria-label={name}
-                    className="group rounded-full border border-slate-700 bg-slate-900/60 p-3 backdrop-blur transition-all duration-300 hover:border-blue-500 hover:bg-blue-500/10"
+                    className="group rounded-full border border-[var(--border-soft)] bg-[var(--bg-panel)] p-3 backdrop-blur transition-all duration-300 hover:border-[var(--accent)] hover:bg-[var(--bg-secondary)]"
                 >
                     <Icon
                         size={20}
-                        className="text-slate-300 transition-colors group-hover:text-blue-400"
+                        className="text-[var(--text-muted)] transition-colors group-hover:text-[var(--accent)]"
                     />
                 </a>
             ))}
