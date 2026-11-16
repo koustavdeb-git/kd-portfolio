@@ -16,13 +16,13 @@ const About = () => {
             subtitle: "Frontend Development",
         },
         {
-            title: "REST",
-            subtitle: "API Integration",
+            title: "TypeScript",
+            subtitle: "Type-Safe Development",
         },
         {
-            title: "UI",
-            subtitle: "Responsive Design",
-        },
+            title: "REST",
+            subtitle: "API Integration",
+        }
     ];
 
     return (
@@ -77,7 +77,7 @@ const About = () => {
                             experience building responsive, scalable, and
                             user-friendly web applications.
 
-                            I specialize in React, JavaScript, Tailwind CSS,
+                            I specialize in React, TypeScript, JavaScript, Tailwind CSS,
                             REST API integration, and modern frontend
                             development practices. I enjoy transforming
                             business requirements into clean, reusable,

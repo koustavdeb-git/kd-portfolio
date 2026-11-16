@@ -7,11 +7,13 @@ import {
 import {
     SiTailwindcss,
     SiSupabase,
+    SiTypescript
 } from "react-icons/si";
 
 const Experience = () => {
     const techStack = [
         { name: "React", icon: FaReact },
+        { name: "TypeScript", icon: SiTypescript },
         { name: "JavaScript", icon: FaJsSquare },
         { name: "Tailwind CSS", icon: SiTailwindcss },
         { name: "Supabase", icon: SiSupabase },
@@ -19,12 +21,12 @@ const Experience = () => {
     ];
 
     const achievements = [
-        "Developed responsive and reusable React components for enterprise applications.",
-        "Optimized application performance and enhanced user experience.",
-        "Integrated REST APIs and implemented CRUD operations.",
-        "Debugged and resolved production issues to improve application stability.",
-        "Collaborated with designers, backend developers, and QA in an Agile environment.",
-        "Participated in code reviews and maintained clean, scalable code.",
+        "Developed responsive, reusable, and scalable UI components using React.js, JavaScript, TypeScript, HTML, CSS, and modern frontend technologies.",
+        "Integrated REST APIs and implemented CRUD functionalities to support key application workflows.",
+        "Improved application performance, optimized component rendering, and enhanced overall user experience.",
+        "Debugged and resolved 50+ production issues, improving application stability and reliability.",
+        "Collaborated with UI/UX designers, backend developers, and QA engineers to deliver features in an Agile environment.",
+        "Participated in code reviews, followed coding best practices, and maintained clean, maintainable, and scalable code.",
     ];
 
     return (
