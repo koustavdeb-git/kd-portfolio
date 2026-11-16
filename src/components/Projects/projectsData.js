@@ -12,7 +12,7 @@ export const professionalProjects = [
             "React",
             "Redux",
             "JavaScript",
-            "Tailwind",
+            "Tailwind CSS",
             "REST API",
         ],
 
@@ -30,7 +30,7 @@ export const professionalProjects = [
 
         technologies: [
             "React",
-            "JavaScript",
+            "TypeScript",
             "REST API",
             "Saas",
         ],
